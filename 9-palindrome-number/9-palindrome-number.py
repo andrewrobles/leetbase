@@ -1,5 +1,6 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
+        """Time: O(n), Space: O(n)"""
         digits = [digit for digit in str(x)]
         i, j = 0, len(digits) - 1
         while i < j:
