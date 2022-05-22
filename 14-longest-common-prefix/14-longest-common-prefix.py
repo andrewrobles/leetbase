@@ -1,5 +1,6 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
+        """Time: O(n^2), Space: O(n)"""
         longest_prefix = ''
         longest_word = max(strs, key=len)       
         for i in range(0, len(longest_word)+1):
