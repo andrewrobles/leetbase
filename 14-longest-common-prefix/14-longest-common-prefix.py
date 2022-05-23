@@ -1,9 +1,9 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        prefixes = []
+        # prefixes = []
         if len(strs) == 1:
             return strs[0]
-        longest_common_prefix = ''
+        longest_common_prefix = None
         for i in range(len(strs) - 1):
             current_word = strs[i]
             next_word = strs[i+1]
@@ -13,8 +13,11 @@ class Solution:
                     current_prefix = current_word[:j + 1]
                 else:
                     break
-            prefixes.append(current_prefix)
-        return min(prefixes) if len(prefixes) != 0 else ""
+            longest_common_prefix = min(longest_common_prefix, current_prefix) if longest_common_prefix != None else current_prefix
+            print(f'longest_common_prefix: {longest_common_prefix}')
+            # prefixes.append(current_prefix)
+        # return min(prefixes) if len(prefixes) != 0 else ""
+        return longest_common_prefix
         
         # """Time: O(n^2), Space: O(n)"""
         # longest_prefix = ''
