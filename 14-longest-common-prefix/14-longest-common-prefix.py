@@ -11,16 +11,10 @@ class Solution:
             for j in range(len(current_word)):
                 if j < len(next_word) and current_word[j] == next_word[j]:
                     current_prefix = current_word[:j + 1]
-                    print(f'current_prefix: {current_prefix}')
                 else:
-                    # longest_common_prefix = current_prefix
-                    # prefixes.append(current_prefix)
-                    # print(f'prefixes: {prefixes}')
                     break
             prefixes.append(current_prefix)
-            print(f'prefixes: {prefixes}')
         return min(prefixes) if len(prefixes) != 0 else ""
-        # return longest_common_prefix
         
         # """Time: O(n^2), Space: O(n)"""
         # longest_prefix = ''
