@@ -1,5 +1,6 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
+        """Time: O(n), Space: O(1)"""
         if len(strs) == 1:
             return strs[0]
         longest_common_prefix = None
