@@ -1,5 +1,6 @@
 class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:  
+    def longestCommonPrefix(self, strs: List[str]) -> str: 
+        """Time: O(n), Space: O(1)"""
         shortest, result = min(strs, key=len), ''
         for i in range(len(shortest)):
             letter = shortest[i]
