@@ -1,25 +1,34 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:  
-        """Time: O(nlogn), Space: O(1)"""
-        shortest_str = min(strs, key=len)
-        longest_common_prefix = ''
-        left, right = 0, len(shortest_str)
-        while left <= right:
-            middle = left + (right - left) // 2
-            prefix = shortest_str[:middle]
-            if self.isCommonPrefix(prefix, strs):
-                left = middle + 1
-                longest_common_prefix = max(prefix, longest_common_prefix)
-            else:
-                right = middle - 1
-        return longest_common_prefix
+        shortest, result = min(strs, key=len), ''
+        for i in range(len(shortest)):
+            letter = shortest[i]
+            for j in range(len(strs)):
+                if letter != strs[j][i]:
+                    return result
+            result = shortest[:i + 1]
+        return result
         
-    def isCommonPrefix(self, prefix, strs):
-        for string in strs:
-            for i, prefix_char in enumerate(prefix):
-                if prefix_char != string[i]:
-                    return False
-        return True
+#         """Time: O(nlogn), Space: O(1)"""
+#         shortest_str = min(strs, key=len)
+#         longest_common_prefix = ''
+#         left, right = 0, len(shortest_str)
+#         while left <= right:
+#             middle = left + (right - left) // 2
+#             prefix = shortest_str[:middle]
+#             if self.isCommonPrefix(prefix, strs):
+#                 left = middle + 1
+#                 longest_common_prefix = max(prefix, longest_common_prefix)
+#             else:
+#                 right = middle - 1
+#         return longest_common_prefix
+        
+#     def isCommonPrefix(self, prefix, strs):
+#         for string in strs:
+#             for i, prefix_char in enumerate(prefix):
+#                 if prefix_char != string[i]:
+#                     return False
+#         return True
         
         # """Time: O(n), Space: O(1)"""
         # if len(strs) == 1:
