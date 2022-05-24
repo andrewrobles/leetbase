@@ -1,6 +1,6 @@
 class Solution:
-    """Time: O(nlogn), Space: O(1)"""
     def longestCommonPrefix(self, strs: List[str]) -> str:  
+        """Time: O(nlogn), Space: O(1)"""
         shortest_str = min(strs, key=len)
         longest_common_prefix = ''
         left, right = 0, len(shortest_str)
