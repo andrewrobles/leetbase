@@ -1,13 +1,8 @@
 class Solution(object):
     def removeDuplicates(self, nums):
-        """
-        1 1 2
-        i
-            j
-        """ 
+        """Time: O(n), Space: O(1)"""
         i = 0
         j = 1
-            
         while j < len(nums):
             if nums[i] != nums[j]:
                 nums[i + 1], nums[j] = nums[j], nums[i + 1]
