@@ -1,15 +1,7 @@
 class Solution(object):
     def numJewelsInStones(self, jewels, stones):
         """
-        Time: O(n^2), Space: O(1)
-        
-        Optimization:
-        aA
-        aAAbbbb
-        a: 1
-        A: 2
-        b: 4
-        """
+        Time: O(n), Space: O(n)"""
         freqs = {}
         for s in stones:
             freqs[s] = 1 if s not in freqs else freqs[s] + 1
