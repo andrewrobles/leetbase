@@ -16,9 +16,7 @@ class Solution(object):
         array = [None] * (2*n)
         for i in range(0, n):
             array[2*i] = nums[i]
-        offset = n
-        for i in range(0, n):
-            array[2*i + 1] = nums[offset + i]
+            array[2*i + 1] = nums[n + i]
         return array
         
         
