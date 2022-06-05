@@ -1,18 +1,14 @@
 class Solution(object):
     def subArrayRanges(self, nums):
-        subarray_sum = 0
-        for i in range (len(nums)):
-            for j in range(i, len(nums)):
-                if i == j:
-                    sub = nums[i:j+1]
-                    miin = nums[i]
-                    maax = nums[i]
-                if nums[j] > maax:
-                    maax = nums[j]
-                elif nums[j] < miin:
-                    miin = nums[j]  
-                subarray_sum += (maax - miin)
-        return subarray_sum
+        res = 0
+        for i, x in enumerate(nums):
+            minv = x
+            maxv = x
+            for  y in nums[i+1:]:
+                minv = min(minv, y)
+                maxv = max(maxv, y)
+                res += maxv-minv 
+        return res
     
 #     def subArrayRanges(self, nums):
 #         """Time: O(n^2), Space: O(1)"""
