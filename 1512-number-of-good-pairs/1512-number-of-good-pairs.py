@@ -1,9 +1,6 @@
 class Solution(object):
     def numIdenticalPairs(self, nums):
-        """
-        1 2 3 1 1 3
-        
-        """
+        """Time: O(n), Space: O(n)"""
         freqs = {}
         for number in nums:
             if number in freqs:
