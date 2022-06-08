@@ -1,6 +1,6 @@
 class Solution:
+    # O(n^2) time, O(1) space
     def subArrayRanges(self, nums: List[int]) -> int:
-        """Time: O(n^2), Space: O(1)"""
         subarray_sum = 0
         for i, start in enumerate(nums):
             minimum = start
