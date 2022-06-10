@@ -1,8 +1,5 @@
 class Solution:
     def reorderLogFiles(self, logs: List[str]) -> List[str]:
-        """
-        logs = ["dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"]
-        """
         # Place all the letter logs at the beginning
         def is_letter_log(log):
             return log.split(' ')[1].isalpha()
