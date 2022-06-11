@@ -7,7 +7,10 @@ class Solution:
         nums_sorted = sorted(nums)
 
         # Find location of num in nums_sorted, index = number of numbers below it
-        final_list = (nums_sorted.index(num) for num in nums)
+        final_list = []
+        for num in nums:
+            final_list.append(nums_sorted.index(num))
+        # final_list = (nums_sorted.index(num) for num in nums)
         
         return final_list
     
