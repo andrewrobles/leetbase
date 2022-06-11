@@ -1,4 +1,5 @@
 class Solution:
+    # O(n^2) time | O(1) space
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         array = []
         for i in range(len(nums)):
