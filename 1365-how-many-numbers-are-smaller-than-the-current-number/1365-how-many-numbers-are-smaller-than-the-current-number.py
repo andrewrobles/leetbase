@@ -1,4 +1,5 @@
 class Solution:
+    # O(nlogn) time | O(n) space
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         # Final list to be returned
         final_list = []      
