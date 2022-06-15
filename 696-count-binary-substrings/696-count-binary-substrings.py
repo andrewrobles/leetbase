@@ -1,16 +1,5 @@
 class Solution:
     def countBinarySubstrings(self, s: str) -> int:
-        """
-        00110011
-        |
-           |
-           
-        
-         
-        For every inflection point
-            Advance two pointers outward
-            Break if no longer a binary substring
-        """
         i = 0
         count = 0
         while i < len(s)-1:
