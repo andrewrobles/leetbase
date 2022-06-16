@@ -6,10 +6,10 @@ class Solution:
                 groups.append(1)
             else:
                 groups[-1] += 1
-        ans = 0
+        count = 0
         for i in range(1, len(groups)):
-            ans += min(groups[i-1], groups[i])
-        return ans
+            count += min(groups[i-1], groups[i])
+        return count
     
     # def countBinarySubstrings(self, s: str) -> int:
     #     i = 0
