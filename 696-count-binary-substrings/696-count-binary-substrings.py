@@ -1,5 +1,6 @@
 class Solution:
     def countBinarySubstrings(self, s: str) -> int:
+        """Approach #1: Group By Character"""
         groups = [1]
         for i in range(1, len(s)):
             if s[i-1] != s[i]:
