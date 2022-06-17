@@ -1,16 +1,28 @@
 class Solution:
+    # Approach #2: Linear Scan
     def countBinarySubstrings(self, s: str) -> int:
-        """Approach #1: Group By Character"""
-        groups = [1]
+        ans, prev, cur = 0, 0, 1
         for i in range(1, len(s)):
             if s[i-1] != s[i]:
-                groups.append(1)
+                ans += min(prev, cur)
+                prev, cur = cur, 1
             else:
-                groups[-1] += 1
-        count = 0
-        for i in range(1, len(groups)):
-            count += min(groups[i-1], groups[i])
-        return count
+                cur += 1
+
+        return ans + min(prev, cur)
+
+    # def countBinarySubstrings(self, s: str) -> int:   
+        # """Approach #1: Group By Character"""
+        # groups = [1]
+        # for i in range(1, len(s)):
+        #     if s[i-1] != s[i]:
+        #         groups.append(1)
+        #     else:
+        #         groups[-1] += 1
+        # count = 0
+        # for i in range(1, len(groups)):
+        #     count += min(groups[i-1], groups[i])
+        # return count
     
     # def countBinarySubstrings(self, s: str) -> int:
     #     i = 0
