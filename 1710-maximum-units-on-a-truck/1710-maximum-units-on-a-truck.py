@@ -1,4 +1,5 @@
 class Solution:
+    # Time: O(nlogn), Space: O(1) 
     def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) -> int:
         box_types, truck_size, units = boxTypes, truckSize, 0
         box_types.sort(key=lambda x: -x[1])
