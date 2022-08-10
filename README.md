@@ -1,2 +1,2 @@
 # LeetCode
-Collection of LeetCode solutions.
+Collection of LeetCode solutions - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
