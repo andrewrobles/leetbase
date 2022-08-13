@@ -1,15 +1,11 @@
 def solution(
-	n
+	x	
 ):
-	return n
+	return x
 
 tests = [
 	{
-		'args': ['helloworld!'],
-		'output': 'helloworld!'
+		'args': [None],
+		'output': None 
 	},
-	{
-		'args': ['helloworld!!'],
-		'output': 'helloworld!!'
-	}
 ]
