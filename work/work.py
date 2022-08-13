@@ -1,11 +1,11 @@
 def solution(
 	x	
 ):
-	return x
+	return x + 1
 
 tests = [
-	{
-		'args': [None],
-		'output': None 
-	},
+	(	
+		1,
+		2 
+	),
 ]
