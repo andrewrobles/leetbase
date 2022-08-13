@@ -1,3 +1,13 @@
 def solution(n):
-	print(n)
-	return 964176192	
+	return 'helloworld!'
+
+tests = [
+	{
+		'args': ['helloworld!'],
+		'output': 'helloworld!'
+	},
+	{
+		'args': ['helloworld!!'],
+		'output': 'helloworld!!'
+	}
+]

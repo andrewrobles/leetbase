@@ -3,10 +3,12 @@ import solution
 
 class TestSolution(unittest.TestCase):
 	def test_solution(self):
-		args = [
-			10100101000001111010011100
-		]
-		output = 964176192 	
+		for test in solution.tests:
+			print('running test')
+			self.assertEqual(
+				solution.solution(*test['args']),
+				test['output']
+			)
 		self.assertEqual(solution.solution(*args), output)
 		
 
