@@ -1,5 +1,7 @@
-def solution(n):
-	return 'helloworld!'
+def solution(
+	n
+):
+	return n
 
 tests = [
 	{
